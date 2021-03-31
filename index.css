@@ -1,11 +1,16 @@
-body {
-    background-color: white;
-}
-
 /* root custom element */
 privacy-policy {
-    padding: 2rem;
+    --color-background: white;
+    --color-theme: lightgray;
+    --line-height: 1.6;
+    --font-size: 17px;
 }
+privacy-policy {
+    line-height: var(--line-height);
+    font-size: var(--font-size);
+    padding: 3rem;
+}
+
 
 /* default html elements */
 privacy-policy a {
@@ -13,9 +18,7 @@ privacy-policy a {
 }
 
 privacy-policy ul,
-privacy-policy ol {
-    
-}
+privacy-policy ol {}
 
 privacy-policy li {
     margin-bottom: 0.5rem;
@@ -23,6 +26,16 @@ privacy-policy li {
 
 privacy-policy p {
     margin-top: 0;
+}
+
+/* header */
+privacy-policy-header {}
+privacy-policy-header-title {
+    font-size: 2rem;
+}
+privacy-policy-updated-date {
+    margin-left: 2rem;
+    font-style: italic;
 }
 
 /* vertical display */
@@ -34,32 +47,39 @@ privacy-policy-list {
 
 /* lists, and lists in lists */
 privacy-policy-list {
-    border-left: 1px solid lightgray;
+    border-left: 1px solid var(--color-theme);
+    padding-left: 4rem;
+    padding-top: 2rem;
 }
 privacy-policy-list privacy-policy-list {
-    padding-left: 2rem;
-    padding-top: 2rem;
 }
 
 /* a content section can be:
    - with no number
    - with a number or letter */
 privacy-policy-section {
+    display: block;
     padding-bottom: 2rem;
+}
+privacy-policy-section[number] {
+    position: relative;
 }
 
 /* a section number */
 privacy-policy-section-number {
-    background-color: lightgray;
-    font-size: 2rem;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    display: flex;
+    font-size: 1.5rem;
+    background-color: var(--color-background);
+}
+privacy-policy-section[number] privacy-policy-section-number {
+    position: absolute;
+    top: 0.4rem;
+    left: 0;
+    transform: translateX(calc(-76% - 2.5rem));
+    font-weight: bold;
 }
 
 /* a section title */
 privacy-policy-section-title {
     display: flex;
     font-size: 2rem;
-    padding: 0.5rem;
 }
