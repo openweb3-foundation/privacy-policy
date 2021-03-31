@@ -8,7 +8,12 @@ privacy-policy {
 privacy-policy {
     line-height: var(--line-height);
     font-size: var(--font-size);
-    padding: 3rem;
+    padding: 0.5rem;
+}
+@media (min-width: 40rem) {
+    privacy-policy {
+	padding: 2.5rem;
+    }
 }
 
 
@@ -29,11 +34,17 @@ privacy-policy p {
 }
 
 /* header */
-privacy-policy-header {}
+privacy-policy-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
 privacy-policy-header-title {
     font-size: 2rem;
 }
 privacy-policy-updated-date {
+    display: flex;
     margin-left: 2rem;
     font-style: italic;
 }
@@ -48,8 +59,13 @@ privacy-policy-list {
 /* lists, and lists in lists */
 privacy-policy-list {
     border-left: 1px solid var(--color-theme);
-    padding-left: 4rem;
-    padding-top: 2rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+@media (min-width: 40rem) {
+    privacy-policy-list {
+	padding-left: 2.7rem;
+    }
 }
 privacy-policy-list privacy-policy-list {
 }
@@ -67,19 +83,13 @@ privacy-policy-section[number] {
 
 /* a section number */
 privacy-policy-section-number {
-    font-size: 1.5rem;
-    background-color: var(--color-background);
-}
-privacy-policy-section[number] privacy-policy-section-number {
-    position: absolute;
-    top: 0.4rem;
-    left: 0;
-    transform: translateX(calc(-76% - 2.5rem));
     font-weight: bold;
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    float: left;
 }
 
 /* a section title */
 privacy-policy-section-title {
-    display: flex;
     font-size: 2rem;
 }
