@@ -28,7 +28,7 @@ Be sure to use minimal HTML elements when creating/updating/deleting content.
 
 For example:
 
-```
+```html
 <privacy-policy-section number="a">
 	<p>This extra paragraph HTML tag is not needed.</p>
 </privacy-policy-section>
@@ -39,8 +39,8 @@ For example:
 ```
 
 But be sure to wrap text in HTML element when needed:
-- `</br>` at the end of a line, to but a line break
-- `<p></p>` element after each other, when a separation between text paragraph are needed.
+- `</br>` at the end of a line, to put a line break
+- `<p></p>` element after each other, when a separation between text paragraphs is needed.
 - `<ul>` & `<ol>` to list some elements, only at the bottom of the HTML tree
 - `<a>` anchor elements to create links
 - `<strong>` to display text in bold
@@ -92,7 +92,7 @@ Examples:
 </privacy-policy-list>
 ```
 
-### `privacy-policy-section-title`
+### `<privacy-policy-section-title>`
 
 Used to show visually the title of a section. There should be only one per section, and it should be used as first element of a section.
 
