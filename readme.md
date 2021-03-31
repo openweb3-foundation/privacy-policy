@@ -40,8 +40,8 @@ For example:
 
 But be sure to wrap text in HTML element when needed:
 - `</br>` at the end of a line, to but a line break
-- `<p></p>` element after each other
-- `<ul>` & `<ol>` to list elements at the bottom of the HTML tree
+- `<p></p>` element after each other, when a separation between text paragraph are needed.
+- `<ul>` & `<ol>` to list some elements, only at the bottom of the HTML tree
 - `<a>` anchor elements to create links
 - `<strong>` to display text in bold
 
