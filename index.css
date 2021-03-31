@@ -1,0 +1,65 @@
+body {
+    background-color: white;
+}
+
+/* root custom element */
+privacy-policy {
+    padding: 2rem;
+}
+
+/* default html elements */
+privacy-policy a {
+    word-break: break-word;
+}
+
+privacy-policy ul,
+privacy-policy ol {
+    
+}
+
+privacy-policy li {
+    margin-bottom: 0.5rem;
+}
+
+privacy-policy p {
+    margin-top: 0;
+}
+
+/* vertical display */
+privacy-policy,
+privacy-policy-list {
+    display: flex;
+    flex-direction: column;
+}
+
+/* lists, and lists in lists */
+privacy-policy-list {
+    border-left: 1px solid lightgray;
+}
+privacy-policy-list privacy-policy-list {
+    padding-left: 2rem;
+    padding-top: 2rem;
+}
+
+/* a content section can be:
+   - with no number
+   - with a number or letter */
+privacy-policy-section {
+    padding-bottom: 2rem;
+}
+
+/* a section number */
+privacy-policy-section-number {
+    background-color: lightgray;
+    font-size: 2rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+}
+
+/* a section title */
+privacy-policy-section-title {
+    display: flex;
+    font-size: 2rem;
+    padding: 0.5rem;
+}
