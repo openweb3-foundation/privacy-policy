@@ -1,4 +1,14 @@
-/* root custom element */
+/* use border-box to style this element andchildren */
+privacy-policy {
+  box-sizing: border-box;
+}
+privacy-policy *,
+privacy-policy *:before,
+privacy-policy *:after {
+  box-sizing: inherit;
+}
+
+/* define variables on root custom element */
 privacy-policy {
 	--color-theme-1: blue; /* polkadot pink */
 	--color-theme-2: lightgray;
@@ -8,6 +18,8 @@ privacy-policy {
 	--line-height: 1.7;
 	--font-size: 17px;
 }
+
+/* root default values */
 privacy-policy {
 	color: var(--color-text);
 	line-height: var(--line-height);
@@ -20,7 +32,6 @@ privacy-policy {
 		padding-right: 2.5rem;
 	}
 }
-
 
 /* default html elements */
 privacy-policy a {
@@ -44,16 +55,23 @@ privacy-policy p {
 	margin-top: 0;
 }
 
-/* header */
+/* header of the policy */
 privacy-policy-header {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
 	margin-bottom: 1.5rem;
 }
+/* title of the policy */
 privacy-policy-header-title {
-	font-size: 2.4rem;
+	font-size: 1.8rem;
 }
+@media (min-width: 40rem) {
+	privacy-policy-header-title {
+		font-size: 2.4rem;
+	}
+}
+/* updated date of the policy */
 privacy-policy-updated-date {
 	display: flex;
 	font-style: italic;
@@ -66,14 +84,15 @@ privacy-policy-list {
 	flex-direction: column;
 }
 
-/* lists, and lists in lists */
+/* lists of sections */
 privacy-policy-list {
 	padding-top: 1rem;
 }
+
+/* lists, grand-children of lists */
 privacy-policy-list privacy-policy-list {
 	padding-left: 1rem;
 }
-
 @media (min-width: 40rem) {
 	privacy-policy-list privacy-policy-list {
 		border-left: 0.1rem solid var(--color-theme-2);
@@ -81,33 +100,30 @@ privacy-policy-list privacy-policy-list {
 	}
 }
 
-/* a content section can be:
-	 - with no number
-	 with a number or letter */
+/* a content section, with: a number, a letter, nothing */
 privacy-policy-section {
-	display: block;
 	padding-bottom: 2rem;
 }
-privacy-policy-section[number] {
-	position: relative;
+
+/* section title */
+privacy-policy-section-title {
+	font-size: 1.5rem;
+}
+@media (min-width: 40rem) {
+	privacy-policy-section-title {
+		font-size: 2rem;
+		padding-left: 0.8rem;
+		border-left: 0.2rem solid var(--color-text);
+	}
 }
 
 /* a section number */
 privacy-policy-section-number {
-	font-weight: bold;
-	line-height: 1.3;
-	font-size: 1.5rem;
-
-	float: left;
-	padding: 0.2rem 0.5rem;
-	margin-top: -0.3rem;
-	margin-right: 1rem;
-}
-
-/* a section title */
-privacy-policy-section-title {
-	font-size: 2rem;
-	line-height: 1.4;
 	display: block;
-	margin-top: -0.6rem;
+	font-size: 1.5rem;
+	line-height: 1.3;
+	font-weight: bold;
+	padding: 0.5rem 0.5rem;
+	margin-bottom: 0.5rem;
+	background-color: var(--color-theme-2);
 }
