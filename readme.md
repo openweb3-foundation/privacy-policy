@@ -1,4 +1,4 @@
-HTML `privacy-policy` custom element and its children, to display privacy policies.
+html `privacy-policy` custom element and its children, to display privacy policies.
 
 # Development
 
@@ -21,7 +21,7 @@ This way it is possible:
 - to target them with css, and lay out the content
 - to define some of these custom-elements as web-components, and add
   javascript based functionalities to these markup elements
-  
+
 ### General remarks
 
 Be sure to use minimal HTML elements when creating/updating/deleting content.
@@ -39,13 +39,13 @@ For example:
 ```
 
 But be sure to wrap text in HTML element when needed:
-- `</br>` at the end of a line, to put a line break
+- `<br/>` at the end of a line, to put a line break
 - `<p></p>` element after each other, when a separation between text paragraphs is needed.
 - `<ul>` & `<ol>` to list some elements, only at the bottom of the HTML tree
 - `<a>` anchor elements to create links
 - `<strong>` to display text in bold
 
-  
+
 ### `<privacy-policy>`
 
 The root element, defining the privacy policies displayed on a
@@ -79,16 +79,16 @@ Examples:
 
 ```html
 <privacy-policy-list>
-  <privacy-policy-section number="I"></privacy-policy-section>
-  <privacy-policy-section number="II"></privacy-policy-section>
-  <privacy-policy-section number="III"></privacy-policy-section>
+	<privacy-policy-section number="I"></privacy-policy-section>
+	<privacy-policy-section number="II"></privacy-policy-section>
+	<privacy-policy-section number="III"></privacy-policy-section>
 </privacy-policy-list>
 ```
 ```html
 <privacy-policy-list>
-  <privacy-policy-section number="1"></privacy-policy-section>
-  <privacy-policy-section number="2"></privacy-policy-section>
-  <privacy-policy-section number="3"></privacy-policy-section>
+	<privacy-policy-section number="1"></privacy-policy-section>
+	<privacy-policy-section number="2"></privacy-policy-section>
+	<privacy-policy-section number="3"></privacy-policy-section>
 </privacy-policy-list>
 ```
 
@@ -97,3 +97,16 @@ Examples:
 Used to show visually the title of a section. There should be only one per section, and it should be used as first element of a section.
 
 Parameters: none
+
+Example:
+```html
+<privacy-policy-section number="I">
+	<privacy-policy-section-title>
+		The section title
+	</privacy-policy-section-title>
+	<privacy-policy-list>
+		<privacy-policy-section number="1"></privacy-policy-section>
+		<privacy-policy-section number="2"></privacy-policy-section>
+</privacy-policy-list>
+</privacy-policy-section>
+```
