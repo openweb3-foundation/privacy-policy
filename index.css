@@ -1,10 +1,10 @@
 /* root custom element */
 privacy-policy {
-	--color-theme-1: #e6007a; /* polkadot pink */
+	--color-theme-1: blue; /* polkadot pink */
 	--color-theme-2: lightgray;
 	--color-text: black;
 	--color-background: white;
-	--color-link: var(--color-theme-1); /* polkadot pink */
+	--color-link: blue; /* polkadot pink */
 	--line-height: 1.7;
 	--font-size: 17px;
 }
@@ -24,9 +24,7 @@ privacy-policy {
 /* default html elements */
 privacy-policy a {
 	word-break: break-word;
-	color: var(--color-text);
-	text-decoration: none;
-	border-bottom: 0.1rem solid var(--color-link);
+	color: var(--color-link);
 }
 privacy-policy a:hover {
 	background-color: var(--color-theme-2);
@@ -46,7 +44,7 @@ privacy-policy p {
 }
 
 /* header */
-privacy-policy-header {
+privacy-policy-headerx {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -86,8 +84,8 @@ privacy-policy-list privacy-policy-list {
 }
 
 /* a content section can be:
-   - with no number
-  - with a number or letter */
+	 - with no number
+	 with a number or letter */
 privacy-policy-section {
 	display: block;
 	padding-bottom: 2rem;
