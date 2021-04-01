@@ -1,11 +1,15 @@
 /* root custom element */
 privacy-policy {
+    --color-theme-1: #e6007a; /* polkadot pink */
+    --color-theme-2: lightgray;
+    --color-text: black;
     --color-background: white;
-    --color-theme: lightgray;
-    --line-height: 1.6;
+    --color-link: var(--color-theme-1); /* polkadot pink */
+    --line-height: 1.7;
     --font-size: 17px;
 }
 privacy-policy {
+    color: var(--color-text);
     line-height: var(--line-height);
     font-size: var(--font-size);
     padding: 0.5rem;
@@ -20,10 +24,18 @@ privacy-policy {
 /* default html elements */
 privacy-policy a {
     word-break: break-word;
+    color: var(--color-text);
+    text-decoration: none;
+    border-bottom: 0.1rem solid var(--color-link);
+}
+privacy-policy a:hover {
+    background-color: var(--color-theme-2);
 }
 
 privacy-policy ul,
-privacy-policy ol {}
+privacy-policy ol {
+    padding-left: 1rem;
+}
 
 privacy-policy li {
     margin-bottom: 0.5rem;
@@ -39,9 +51,11 @@ privacy-policy-header {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
 }
 privacy-policy-header-title {
-    font-size: 2rem;
+    font-size: 2.4rem;
 }
 privacy-policy-updated-date {
     display: flex;
@@ -58,16 +72,17 @@ privacy-policy-list {
 
 /* lists, and lists in lists */
 privacy-policy-list {
-    border-left: 1px solid var(--color-theme);
-    padding-left: 1rem;
     padding-top: 1rem;
 }
+privacy-policy-list privacy-policy-list {
+    padding-left: 1rem;
+}
+
 @media (min-width: 40rem) {
-    privacy-policy-list {
+    privacy-policy-list privacy-policy-list {
+	border-left: 0.1rem solid var(--color-theme-2);
 	padding-left: 2.7rem;
     }
-}
-privacy-policy-list privacy-policy-list {
 }
 
 /* a content section can be:
@@ -86,13 +101,17 @@ privacy-policy-section-number {
     font-weight: bold;
     line-height: 1.3;
     font-size: 1.5rem;
-    margin-right: 1rem;
+
     float: left;
+    padding: 0.2rem 0.5rem;
+    margin-top: -0.3rem;
+    margin-right: 1rem;
 }
 
 /* a section title */
 privacy-policy-section-title {
     font-size: 2rem;
-    margin-top: -0.6rem;
+    line-height: 1.4;
     display: block;
+    margin-top: -0.6rem;
 }
