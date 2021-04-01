@@ -16,7 +16,8 @@ privacy-policy {
 }
 @media (min-width: 40rem) {
 	privacy-policy {
-		padding: 2.5rem;
+		padding-left: 2.5rem;
+		padding-right: 2.5rem;
 	}
 }
 
@@ -44,12 +45,10 @@ privacy-policy p {
 }
 
 /* header */
-privacy-policy-headerx {
+privacy-policy-header {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	flex-wrap: wrap;
-	align-items: center;
-	justify-content: space-between;
 	margin-bottom: 1.5rem;
 }
 privacy-policy-header-title {
@@ -57,7 +56,6 @@ privacy-policy-header-title {
 }
 privacy-policy-updated-date {
 	display: flex;
-	margin-left: 2rem;
 	font-style: italic;
 }
 
