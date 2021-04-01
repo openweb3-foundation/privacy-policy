@@ -14,7 +14,27 @@ This repository is using:
 - HTML custom-elements, to describe each element of the policy
 - web-components (`./index.js`), to add features (ex: numbering of sections)
 
-## custom-elements
+# Usage
+
+You can import and define the elements link this in your .html files (also in a .js files).
+
+```html
+<script type="module">
+	import {
+	PrivacyPolicy,
+	PrivacyPolicySection
+	} from './index.js'
+
+	customElements.define('privacy-policy', PrivacyPolicy)
+	customElements.define('privacy-policy-section', PrivacyPolicySection)
+</script>
+```
+
+The `./index.css` file is optional, but can provide a default styling for a policy.
+
+The `./index.html` shows the actual content (and markup) or the privacy policy.
+
+## custom-elements list
 
 In order to describe the content of the privacy policy, a few HTML custom elements are defined.
 

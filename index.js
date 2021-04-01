@@ -39,5 +39,7 @@ class PrivacyPolicySection extends HTMLElement {
 	}
 }
 
-customElements.define('privacy-policy', PrivacyPolicy)
-customElements.define('privacy-policy-section', PrivacyPolicySection)
+export {
+	PrivacyPolicy,
+	PrivacyPolicySection
+}
