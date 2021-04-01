@@ -1,8 +1,12 @@
-thtml `privacy-policy` custom element and its children, to display privacy policies.
+HTML `privacy-policy` custom element and its children, to display privacy policies.
 
 # Development
 
 - open `./index.html` in a browser, refresh the page as change are made
+
+Alternatively, you can use"
+[npm:serve](https://www.npmjs.com/package/serve) (installed
+globaly). This way you can serve the local folder with `serve .`.
 
 
 ## Stack
@@ -30,20 +34,20 @@ For example:
 
 ```html
 <privacy-policy-section number="a">
-	<p>This extra paragraph HTML tag is not needed.</p>
+  <p>This extra paragraph HTML tag is not needed.</p>
 </privacy-policy-section>
 
 <privacy-policy-section number="b">
-	No extra paragraph here, simpler to read.
+  No extra paragraph here, simpler to read.
 </privacy-policy-section>
 
 <privacy-policy-section number="b">
-	<p>Here we choose to use two paragraph; first one</p>
-	<p>And the second one here; followed by an organised list (with numbers)</p>
-	<ol>
-		<li>One list element</li>
-		<li>Second list element</li>
-	</ol>
+  <p>Here we choose to use two paragraph; first one</p>
+  <p>And the second one here; followed by an organised list (with numbers)</p>
+  <ol>
+    <li>One list element</li>
+    <li>Second list element</li>
+  </ol>
 </privacy-policy-section>
 ```
 
@@ -107,16 +111,24 @@ Examples:
 
 ```html
 <privacy-policy-list>
-	<privacy-policy-section number="I"></privacy-policy-section>
-	<privacy-policy-section number="II"></privacy-policy-section>
-	<privacy-policy-section number="III"></privacy-policy-section>
+  <privacy-policy-section number="I"></privacy-policy-section>
+  <privacy-policy-section number="II"></privacy-policy-section>
+  <privacy-policy-section number="III"></privacy-policy-section>
 </privacy-policy-list>
 ```
 ```html
 <privacy-policy-list>
-	<privacy-policy-section number="1"></privacy-policy-section>
-	<privacy-policy-section number="2"></privacy-policy-section>
-	<privacy-policy-section number="3"></privacy-policy-section>
+  <privacy-policy-section number="1">
+    <privacy-policy-section-title>
+      A section title
+    </privacy-policy-section-title>
+    <privacy-policy-list>
+      <privacy-policy-section number="a"></privacy-policy-section>
+      <privacy-policy-section number="b"></privacy-policy-section>
+    </privacy-policy-list>
+  </privacy-policy-section>
+  <privacy-policy-section number="2"></privacy-policy-section>
+  <privacy-policy-section number="3"></privacy-policy-section>
 </privacy-policy-list>
 ```
 
@@ -131,12 +143,12 @@ Children: none; just plain text (not even `<p>` tags)
 Example:
 ```html
 <privacy-policy-section number="I">
-	<privacy-policy-section-title>
-		The section title
-	</privacy-policy-section-title>
-	<privacy-policy-list>
-		<privacy-policy-section number="1"></privacy-policy-section>
-		<privacy-policy-section number="2"></privacy-policy-section>
-</privacy-policy-list>
+  <privacy-policy-section-title>
+    The section title
+  </privacy-policy-section-title>
+  <privacy-policy-list>
+    <privacy-policy-section number="1"></privacy-policy-section>
+    <privacy-policy-section number="2"></privacy-policy-section>
+  </privacy-policy-list>
 </privacy-policy-section>
 ```
